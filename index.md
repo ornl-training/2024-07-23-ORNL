@@ -139,10 +139,8 @@ address.
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
-  Come to this building on Tuesday ONLY using the   
-  <a href="https://www.ornl.gov/sites/default/files/05-01785B-main-C.pdf">main campus map</a>.
-  <br>
-  On July 24th and 25th, we will meet online using Teams.
+  Come to this building on Tuesday <strong>ONLY</strong> using the   
+  <a href="https://www.ornl.gov/sites/default/files/05-01785B-main-C.pdf">main campus map</a>. On July 24th and 25th, we will meet online using Teams.
 </p>
 {% elsif online == "true_public" %}
 <p id="where">
@@ -198,7 +196,7 @@ special instructions.
 {% if online == "false" %}
   We are dedicated to providing a positive and accessible learning environment for all. We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
   However, we do want to help create an inclusive, accessible experience for all participants. We encourage you to share any information that would be helpful to make your Carpentries experience accessible. 
-  To request an accommodation for this workshop, please email pinojc@ornl.gov.
+  To request an accommodation for this workshop, please <a href="mailto:pinojc@ornl.gov">email us</a>.
 </p>
 {% else %}
   We are dedicated to providing a positive and accessible learning environment for all. 
