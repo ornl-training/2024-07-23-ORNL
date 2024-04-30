@@ -139,7 +139,7 @@ address.
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
-  Find this building on July 23rd using the   
+  Come to this building on Tuesday ONLY using the   
   <a href="https://www.ornl.gov/sites/default/files/05-01785B-main-C.pdf">main campus map</a>.
   <br>
   On July 24th and 25th, we will meet online using Teams.
@@ -148,8 +148,7 @@ address.
 <p id="where">
   <strong>Where:</strong>
   online at <a href="{{page.address}}">{{page.address}}</a>.
-  If you need a password or other information to access the training,
-  the instructor will pass it on to you before the workshop.
+  On Tuesday, July 23rd, we will meet in Rom. 214, Bldg. 5200. Look for it on the <a href="https://www.ornl.gov/sites/default/files/05-01785B-main-C.pdf">main campus map</a>.
 </p>
 {% elsif online == "true_private" %}
 <p id="where">
@@ -258,11 +257,12 @@ Edit the text to match who can attend the workshop. For instance:
 - If you are interested in attending this workshop, contact me@example.com
   for more information
 
+{% endcomment %}  
+
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to ....
+    This workshop is open to ORNL summer interns who have registered and received a confirmation email.
 </p>
-{% endcomment %}
 
 <hr/>
 
