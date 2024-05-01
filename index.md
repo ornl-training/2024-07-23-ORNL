@@ -4,7 +4,7 @@ layout: workshop      # DON'T CHANGE THIS.
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
 venue: "Oak Ridge National Laboratory"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "Rm. 214, Bldg. 5200"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "eng"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "36.012009"        # decimal latitude of workshop venue (use https://www.latlong.net/)
@@ -17,7 +17,7 @@ instructor: ["Janine Pino", "Marshall McDonnell"] # boxed, comma-separated list 
 helper: ["Meghan Berry", "Ian Goethert"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["pinojc@ornl.gov"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes: https://pad.carpentries.org/2024-07-23-ornl # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite: https://www.eventbrite.com/e/ornl-software-carpentry-workshop-for-summer-interns-tickets-894372882367 # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -30,14 +30,6 @@ If the value is not 'true', 'false', 'null', or a number, please use
 double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
-
-
-{% comment %}
-8< ============= For a workshop delete from here =============
-
-8< ============================= until here ==================
-{% endcomment %}
-
 
 {% comment %}
 Check DC curriculum
@@ -139,19 +131,22 @@ address.
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
-  Come to this building on Tuesday <strong>ONLY</strong> using the   
-  <a href="https://www.ornl.gov/sites/default/files/05-01785B-main-C.pdf">main campus map</a>. On July 24th and 25th, we will meet online using Teams.
+  Get directions with
+  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
+  or
+  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
 </p>
 {% elsif online == "true_public" %}
 <p id="where">
   <strong>Where:</strong>
   online at <a href="{{page.address}}">{{page.address}}</a>.
-  On Tuesday, July 23rd, we will meet in Rom. 214, Bldg. 5200. Look for it on the <a href="https://www.ornl.gov/sites/default/files/05-01785B-main-C.pdf">main campus map</a>.
+  If you need a password or other information to access the training,
+  the instructor will pass it on to you before the workshop.
 </p>
 {% elsif online == "true_private" %}
 <p id="where">
-  <strong>Where:</strong> This training will take place online.
-  The instructors will provide you with the information you will need to connect to this meeting.
+  <strong>Where:</strong> This training will take place in person on Tuesday, July 23. Please come to room 214, bldg. 5200 (the second floor of the Visitor's Center). The next two days will take place online in Teams.
+  The organizers will provide you with the information you will need to connect to this meeting.
 </p>
 {% endif %}
 
@@ -194,9 +189,20 @@ special instructions.
 <p id="accessibility">
   <strong>Accessibility:</strong>
 {% if online == "false" %}
-  We are dedicated to providing a positive and accessible learning environment for all. We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
-  However, we do want to help create an inclusive, accessible experience for all participants. We encourage you to share any information that would be helpful to make your Carpentries experience accessible. 
-  To request an accommodation for this workshop, please <a href="mailto:pinojc@ornl.gov">email us</a>.
+  We are committed to making this workshop
+  accessible to everybody.  For workshops at a physical location, the workshop organizers have checked that:
+</p>
+<ul>
+  <li>The room is wheelchair / scooter accessible.</li>
+  <li>Accessible restrooms are available.</li>
+</ul>
+<p>
+  Materials will be provided in advance of the workshop and
+  large-print handouts are available if needed by notifying the
+  organizers in advance.  If we can help making learning easier for
+  you (e.g. sign-language interpreters, lactation facilities) please
+  get in touch (using contact details below) and we will
+  attempt to provide them.
 </p>
 {% else %}
   We are dedicated to providing a positive and accessible learning environment for all. 
@@ -259,7 +265,7 @@ Edit the text to match who can attend the workshop. For instance:
 
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to ORNL summer interns who have registered and received a confirmation email.
+    This workshop is open to ORNL summer interns who have registered through Eventbrite and received a confirmation email.
 </p>
 
 <hr/>
